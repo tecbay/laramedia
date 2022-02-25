@@ -1,0 +1,5 @@
+{
+    "require": {
+        "orchestra/testbench": "^7.1"
+    }
+}
