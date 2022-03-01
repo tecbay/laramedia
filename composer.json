@@ -1,5 +1,39 @@
 {
-    "require": {
-        "orchestra/testbench": "^7.1"
+  "name": "tecbay/laramedia",
+  "description": "A demo package",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Miraj Khan",
+      "email": "miraj.net.xp@gmail.com"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Tecbay\\Laramedia\\": "src/",
+      "Tecbay\\Laramedia\\Database\\Factories\\": "database/factories/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tecbay\\Laramedia\\Tests\\" : "tests/"
+    }
+  },
+  "require": {
+    "spatie/laravel-medialibrary": "^10.1"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^7.1",
+    "phpunit/phpunit": "^9.5"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Tecbay\\Laramedia\\LaramediaServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
