@@ -7,5 +7,5 @@ use Tecbay\Laramedia\Models\TemporaryMedia;
 
 interface HasMedia extends \Spatie\MediaLibrary\HasMedia
 {
-    public function fromTemporaryMedia(TemporaryMedia|string $temporaryMedia, $mediaCollection = 'default'): FileAdder;
+    public function addMediaFromTemporaryMedia(TemporaryMedia|string $temporaryMedia): FileAdder;
 }

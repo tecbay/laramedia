@@ -35,4 +35,24 @@ class TemporaryMedia extends Model implements HasMedia
     {
         return $this->getFirstMedia()->getUrl();
     }
+
+    public function getKeyName()
+    {
+        return 'uuid';
+    }
+
+    public function getKeyType()
+    {
+        return 'string';
+    }
+
+    public function getIncrementing()
+    {
+        return false;
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'uuid';
+    }
 }

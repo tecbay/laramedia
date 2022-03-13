@@ -1,6 +1,6 @@
 {
   "name": "tecbay/laramedia",
-  "description": "A demo package",
+  "description": "This package is a simple wrapper for laravel-medialibrary package. Which gives a elegant way of uploading temporary media.",
   "type": "library",
   "license": "MIT",
   "authors": [

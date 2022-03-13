@@ -10,6 +10,8 @@ class TemporaryMediaController extends Controller
 {
     public function store()
     {
+        request()->validate(['file' => ['required', 'file']]);
+
         /** @var TemporaryMedia $temporaryMedia */
         $temporaryMedia = TemporaryMedia::create([
             'uuid' => Uuid::uuid4(),
