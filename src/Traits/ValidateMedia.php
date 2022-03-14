@@ -11,8 +11,9 @@ trait ValidateMedia
     {
         return function ($key, $value, $fail) {
             /** @var TemporaryMedia $item */
+
             foreach (TemporaryMedia::whereIn('uuid', $value)->get() as $item) {
-                if ($item->getFirstMedia()->getTypeAttribute() !== 'image') {
+                if ($item->getFirstMedia()->getTypeFromMime() !== 'image') {
                     $fail('Invalid image type');
                 };
             }
@@ -23,7 +24,7 @@ trait ValidateMedia
     public function image()
     {
         return function ($key, $value, $fail) {
-            if (TemporaryMedia::whereIn('uuid', $value)->first()->getFirstMedia()->getTypeAttribute() !== 'image') {
+            if (TemporaryMedia::whereIn('uuid', $value)->first()->getFirstMedia()->getTypeFromMime() !== 'image') {
                 $fail('Invalid image type');
             };
         };
